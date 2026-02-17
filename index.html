@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,11 +95,11 @@
             color: var(--accent);
         }
 
-        .nav-links a.btn-primary,                                                                                                                                                                   
-        .nav-links a.btn-primary:hover {                                                                                                                                                     
-        color: var(--white);                                                                                                                                                             
+        .nav-links a.btn-primary,
+        .nav-links a.btn-primary:hover {
+            color: var(--white);
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -371,6 +372,44 @@
             font-size: 0.95rem;
         }
 
+        /* Problems */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .problem-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .problem-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
         /* What You Get */
         .pillars-grid {
             display: grid;
@@ -537,6 +576,149 @@
             line-height: 1.6;
         }
 
+        /* Partners */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .partner-card {
+            background: var(--off-white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .partner-photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.25rem;
+            display: block;
+        }
+
+        .partner-card h4 {
+            font-size: 1.05rem;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .partner-role {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .partner-card p {
+            color: var(--text-light);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-photo {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-company {
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        /* Inline Testimonial */
+        .inline-testimonial {
+            padding: 4rem 2rem;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .inline-testimonial .testimonial-card {
+            border: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        .inline-testimonial .testimonial-quote {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .inline-testimonial .testimonial-author {
+            justify-content: center;
+        }
+
         /* CTA Section */
         .cta-section {
             background: var(--white);
@@ -628,7 +810,13 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            .advisors-preview {
+            .problems-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .hero-stats {
@@ -650,7 +838,13 @@
                 flex-direction: column;
                 gap: 1.5rem;
             }
-            .advisors-preview {
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
             section {
@@ -664,7 +858,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-inner">
-            <a href="#" class="logo"><img src="upekkha-logo.png" alt="Upekkha" style="height: 28px;"></a>
+            <a href="#" class="logo"><img src="https://cdn.prod.website-files.com/6660300a285c80dfaaad807f/6661afde449afc09a5b070ef_64f1751d6e8978948f7e1e2e_imresizer-1693545466814.png" alt="Upekkha" style="height: 28px;"></a>
             <div class="nav-links">
                 <a href="#program">Program</a>
                 <a href="#pillars">What You Get</a>
@@ -678,8 +872,8 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-badge">Advisory Program</div>
-            <h1>Growing your B2B software is messy. <em>We help you cut through.</em></h1>
-            <p>An advisory program for founders who have achieved product-market fit and are ready to accelerate growth, refine go-to-market strategies, and navigate the unique challenges of scaling AI-powered products.</p>
+            <h1>Growing your B2B Software is messy. <em>We help you cut through.</em></h1>
+            <p>An advisory program for founders who are ready to accelerate growth, refine go-to-market strategies, and navigate the unique challenges of scaling B2B software.</p>
             <div class="hero-ctas">
                 <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">Apply Now</a>
                 <a href="#program" class="btn btn-outline">Learn More</a>
@@ -694,7 +888,7 @@
                 <div>
                     <div class="section-label">Who It's For</div>
                     <h2 class="section-title">Built for founders ready to break through</h2>
-                    <p class="section-subtitle" style="margin-bottom: 2rem;">This program is designed for B2B Software founders who have proven product-market fit and are now focused on scaling.</p>
+                    <p class="section-subtitle" style="margin-bottom: 2rem;">This program is designed for B2B software founders who are focused on scaling.</p>
                     <ul class="criteria-list">
                         <li>
                             <div class="criteria-icon">&check;</div>
@@ -702,7 +896,7 @@
                         </li>
                         <li>
                             <div class="criteria-icon">&check;</div>
-                            <span>You're building a <strong>B2B Software</strong> product with real traction</span>
+                            <span>You're building an <strong>B2B software</strong> product with real traction</span>
                         </li>
                         <li>
                             <div class="criteria-icon">&check;</div>
@@ -717,6 +911,9 @@
                             <span>You're ready for <strong>hands-on advisory</strong>, not just generic advice</span>
                         </li>
                     </ul>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">See if you qualify</a>
+                    </div>
                 </div>
                 <div class="journey-card">
                     <div class="journey-visual">
@@ -735,6 +932,55 @@
             </div>
         </div>
     </section>
+
+    <!-- Problems Section -->
+    <section id="challenges" style="background: var(--off-white);">
+        <div class="section-inner">
+            <div class="section-label">Sound Familiar?</div>
+            <h2 class="section-title">The challenges you're facing</h2>
+            <p class="section-subtitle">Scaling is a different game. These are the problems founders come to us with.</p>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">&#9888;</div>
+                    <h3>Growth has stalled</h3>
+                    <p>Revenue has plateaued. The playbook that got you here isn't working for what's next.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">&#9889;</div>
+                    <h3>AI is reshaping your market</h3>
+                    <p>New AI-native competitors are emerging, buyer expectations are shifting, and you need to figure out how to adapt &mdash; or lead the change.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">&#9881;</div>
+                    <h3>GTM isn't scaling</h3>
+                    <p>Founder-led sales got you early customers, but you're struggling to build a repeatable, scalable go-to-market engine.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">&#10067;</div>
+                    <h3>Unclear what to prioritize</h3>
+                    <p>Product, hiring, fundraising, expansion &mdash; everything feels urgent. You need a framework to focus on what actually moves the needle.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">We can help &mdash; Apply now</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="inline-testimonial">
+        <div class="section-inner">
+            <div class="testimonial-card" style="max-width: 700px; margin: 0 auto;">
+                <div class="testimonial-quote">&ldquo;Upekkha was instrumental in shaping how we thought about scaling Almabase. The advisory helped us get clarity on our go-to-market, sharpen our positioning, and build the discipline needed to grow in the US market.&rdquo;</div>
+                <div class="testimonial-author">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQHCGd8qZu-GBw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1729005945487?e=2147483647&v=beta&t=OQn0XCFRUj2-2XX44wL7D9a8YVAv7ngueSpZ0nT0tUs" alt="Kalyan Varma" class="testimonial-photo">
+                    <div>
+                        <div class="testimonial-name">Kalyan Varma</div>
+                        <div class="testimonial-company">Co-Founder &amp; CEO, Almabase</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- What You Get -->
     <section id="pillars">
@@ -774,6 +1020,9 @@
                     <p>Connect with a network of B2B software founders at similar stages. Peer learning, accountability, and relationships that compound over time.</p>
                 </div>
             </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">Get started today</a>
+            </div>
         </div>
     </section>
 
@@ -800,33 +1049,82 @@
                     <p>Tap into the Upekkha founder community, mentors, and resources as you scale.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" style="background: var(--white);">
-        <div class="section-inner" style="text-align: center;">
-            <div class="section-label">Pricing</div>
-            <h2 class="section-title">Tailored to your stage</h2>
-            <p class="section-subtitle" style="margin: 0 auto 2.5rem;">Every founder's journey is different. Our pricing reflects that.</p>
-            <div style="max-width: 520px; margin: 0 auto; background: var(--off-white); border: 1px solid var(--border); border-radius: 16px; padding: 3rem;">
-                <div style="font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">Custom</div>
-                <div style="color: var(--accent); font-weight: 600; font-size: 1rem; margin-bottom: 1.5rem;">Retainer + Outcome-Based Fee</div>
-                <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Pricing is structured as a combination of retainer and outcome-based fee, customized based on your company's stage, needs, and the scope of advisory engagement.</p>
-                <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">Apply to Learn More</a>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">Start your scaling journey</a>
             </div>
         </div>
     </section>
+
+    <div class="inline-testimonial">
+        <div class="section-inner">
+            <div class="testimonial-card" style="max-width: 700px; margin: 0 auto;">
+                <div class="testimonial-quote">&ldquo;Upekkha is a founder-friendly accelerator that helped us with funding, go-to-market strategy, and scaling. Their biggest value is speeding up your journey by bringing clarity to your thinking and shortening your cycles. I'd highly recommend it to any founder.&rdquo;</div>
+                <div class="testimonial-author">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGPbpfLEq9K7A/profile-displayphoto-shrink_200_200/B4DZXA0hqHGkAc-/0/1742696750142?e=2147483647&v=beta&t=hf7VSWtV89-lgApsSfVBrrmYz6B6huXHcjaljOlwchU" alt="Ankit Tanna" class="testimonial-photo">
+                    <div>
+                        <div class="testimonial-name">Ankit Tanna</div>
+                        <div class="testimonial-company">Founder, Truein</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partners Section -->
+    <section id="partners" style="background: var(--white);">
+        <div class="section-inner">
+            <div class="section-label">Team</div>
+            <h2 class="section-title">Partners</h2>
+            <p class="section-subtitle">Operators and founders who have scaled B2B companies and now guide the next generation.</p>
+            <div class="partners-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="partner-card">
+                    <img src="https://cdn.prod.website-files.com/6660300a285c80dfaaad812a/66c79eea430d5b39480dedea_66c78fbd0f8c0ee35c4fcde4_668de85aa7190df5f2be9e18_3-p-500.png" alt="Prasanna Krishnamoorthy" class="partner-photo">
+                    <h4>Prasanna Krishnamoorthy</h4>
+                    <div class="partner-role">Managing Partner &amp; Co-Founder</div>
+                    <p>Ex-CTO-in-Residence at Microsoft Accelerator India. Worked hands-on with 120+ startups. B2B SaaS product &amp; growth coach. 2x startup founder.</p>
+                </div>
+                <div class="partner-card">
+                    <img src="https://cdn.prod.website-files.com/6660300a285c80dfaaad812a/66c79eebf922194cc4977690_66c79e459b6a1c39c8fad25c_668de85aa7190df5f2be9e14_4-p-500.png" alt="Shekar Nair" class="partner-photo">
+                    <h4>Shekar Nair</h4>
+                    <div class="partner-role">Managing Partner &amp; Co-Founder</div>
+                    <p>1 IPO (Xylan, USA) and 3 exits (Xylan, Allegro, Elina). Former India Head &amp; APAC OEM at NetApp. EIR at TWVP. Deep enterprise and M&amp;A experience.</p>
+                </div>
+                <div class="partner-card">
+                    <img src="https://cdn.prod.website-files.com/6660300a285c80dfaaad812a/66c79eea0b9a9a1a181d4a7f_66c794c2ba42995aa1be78a4_Gokul.png" alt="Gokul KS" class="partner-photo">
+                    <h4>Gokul KS</h4>
+                    <div class="partner-role">Partner</div>
+                    <p>Entrepreneur and Indian product startup ecosystem enabler. Drives Upekkha's accelerator programs and founder community engagement across 300+ founders.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">Work with us</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="inline-testimonial">
+        <div class="section-inner">
+            <div class="testimonial-card" style="max-width: 700px; margin: 0 auto;">
+                <div class="testimonial-quote">&ldquo;Upekkha helped us identify the right buyer persona, shifting our sales from L&amp;D to delivery managers in IT services, which unlocked multiple new logos. Beyond strategy, Upekkha breaks you out of your echo chamber and lets you learn from other founders' journeys &mdash; that's invaluable.&rdquo;</div>
+                <div class="testimonial-author">
+                    <img src="https://cdn.theorg.com/8221baf1-e2de-4fb0-852a-5da14ce2dceb_medium.jpg" alt="Giridhar LV" class="testimonial-photo">
+                    <div>
+                        <div class="testimonial-name">Giridhar LV</div>
+                        <div class="testimonial-company">Co-Founder &amp; CEO, Nuvepro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CTA Section -->
     <section class="cta-section" id="apply">
         <div class="section-inner">
             <div class="section-label">Apply Now</div>
-            <h2 class="section-title">Ready to scale your B2B Software?</h2>
+            <h2 class="section-title">Ready to scale your B2B software?</h2>
             <p class="section-subtitle">We work with a select number of founders to ensure deep, personalized advisory. Apply today to see if the program is right for you.</p>
             <div class="cta-buttons">
                 <a href="https://airtable.com/appFjp1F5EUvmDXNK/shrIrfx3nBxBd5QSb" target="_blank" class="btn btn-primary">Apply for the Advisory Program</a>
-                <a href="mailto:advisory@upekkha.io" class="btn btn-outline">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -834,7 +1132,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
-            <div class="footer-logo"><img src="upekkha-logo.png" alt="Upekkha" style="height: 28px;"></div>
+            <div class="footer-logo"><img src="https://cdn.prod.website-files.com/6660300a285c80dfaaad807f/6661afde449afc09a5b070ef_64f1751d6e8978948f7e1e2e_imresizer-1693545466814.png" alt="Upekkha" style="height: 28px;"></div>
             <p>Stillness amidst the chaos. Scaling with clarity.</p>
             <p style="margin-top: 1rem;">&copy; 2026 Upekkha. All rights reserved. &nbsp;|&nbsp; <a href="https://www.upekkha.io">upekkha.io</a></p>
         </div>
